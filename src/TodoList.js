@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
+import Todo from "./Todo";
 
 class TodoList extends Component {
     constructor(props) {
         super(props);
-        this.state = { todos: [] };
+        this.state = { todos: [{ task: "Feed the Fish" }, { task: "Groom Chickens" }] };
     }
     render() {
+        const todos = this.state.todos.map(todo => {
+            return <Todo task={todo.task} />;
+        });
         return (
-            <div>
+            < div >
                 <h1>Todo List!</h1>
                 <ul>
-                    <li> Todo 1</li>
-                    <li> Todo 2</li>
+                    <li> {todos}</li>
                 </ul>
-            </div>
+            </div >
         )
     }
 }
