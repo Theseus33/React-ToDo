@@ -73,7 +73,7 @@
     padding: 0 1.5em;
     font-size: initial;
   }
-  .Todo-edit-form button {
+  .Todo-edit-form button {  
     padding: 0 1.3rem;
     border: none;
     background: #ff6666;
@@ -93,4 +93,17 @@
     font-family: "Quicksand", sans-serif;
     height: 3rem;
   }
-  
+  .Todo-buttons {
+    flex-shrink: 0;
+    padding-left: 0.7em;
+  }
+
+  .Todo-buttons button {
+      border: none; 
+      font-size: 1em;
+      margin: 0.4em;
+      background: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      color: #fff;
+  }

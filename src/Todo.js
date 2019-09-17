@@ -51,18 +51,22 @@ class Todo extends Component {
         } else {
             result = (
                 <div className="Todo">
-                    <button onClick={this.toggleForm}>Edit</button>
-                    <button onClick={this.handleRemove}>X</button>
-                    <li className={this.props.completed ? "Todo-task completed" : "Todo-task"} onClick={this.handleToggle}>
+                    <li className={this.props.completed ? "Todo-task completed" : "Todo-task"}
+                        onClick={this.handleToggle}>
                         {this.props.task}
                     </li>
+                    <div className="Todo-buttons">
+                        <button onClick={this.toggleForm}>
+                            <i class='fas fa-pen' />
+                        </button>
+                        <button onClick={this.handleRemove}>
+                            <i class='fas fa-trash' />
+                        </button>
+                    </div>
                 </div>
             );
-
         }
-
         return result;
     }
-
 }
 export default Todo;
